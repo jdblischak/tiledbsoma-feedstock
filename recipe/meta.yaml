@@ -38,6 +38,7 @@ outputs:
         - git
         - cmake
         - make  # [not win]
+        - tiledb  {{ tiledb }}
       host:
         - tiledb 2.15.*
         - spdlog

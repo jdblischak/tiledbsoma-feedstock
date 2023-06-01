@@ -23,3 +23,6 @@ python_impl:
   - cpython
   - cpython
   - cpython
+tiledb:
+  - 2.15.2
+  - 2.15.3
