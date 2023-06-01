@@ -23,3 +23,9 @@ python_impl:
   - cpython
   - cpython
   - cpython
+c_compiler_version:
+  - '11'  # [linux]
+  - '14'  # [osx]
+cxx_compiler_version:
+  - '11'  # [linux]
+  - '14'  # [osx]
