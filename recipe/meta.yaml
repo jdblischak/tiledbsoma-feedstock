@@ -38,13 +38,12 @@ outputs:
         - git
         - cmake
         - make  # [not win]
-        - tiledb  {{ tiledb }}
       host:
-        - tiledb 2.15.*
+        - tiledb  {{ tiledb }}
         - spdlog
         - fmt
       run:
-        - tiledb 2.15.*
+        - tiledb  {{ tiledb }}
         - spdlog
         - fmt
   - name: tiledbsoma-py
