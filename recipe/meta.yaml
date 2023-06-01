@@ -27,7 +27,8 @@ build:
   skip: true  # [win or linux32 or py2k]
 # Important: set this back to 0 on a new release
   run_exports:
-    - {{ pin_subpackage('libtiledbsoma', exact=True) }}
+    strong:
+      - {{ pin_subpackage('libtiledbsoma', exact=True) }}
 
 outputs:
   - name: libtiledbsoma
