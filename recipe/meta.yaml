@@ -23,7 +23,7 @@ source:
 
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win or linux32 or py2k]
 # Important: set this back to 0 on a new release
 
@@ -31,6 +31,9 @@ outputs:
   - name: libtiledbsoma
     version: {{ version }}
     script: build-libtiledbsoma.sh  # [not win]
+    build:
+      run_exports:
+        - {{ pin_subpackage('libtiledbsoma', exact=True) }}
     requirements:
       build:
         - {{ compiler('c') }}
