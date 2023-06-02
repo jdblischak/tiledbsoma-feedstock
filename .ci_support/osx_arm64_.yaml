@@ -32,8 +32,6 @@ spdlog:
 - '1.11'
 target_platform:
 - osx-arm64
-tiledb:
-- 2.15.3
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
