@@ -15,8 +15,8 @@ package:
 # Post-tag real thing:
 source:
   git_url: https://github.com/single-cell-data/TileDB-SOMA.git
-  git_rev: main
-  git_depth: 1
+  git_rev: append-cmake-flags
+  git_depth: -1
 
 # Pre-tag canary "will Conda be green if we release":
 #source:
