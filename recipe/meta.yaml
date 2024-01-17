@@ -1,5 +1,5 @@
 {% set name = "tiledbsoma" %}
-{% set version = "1.6.2" %}
+{% set version = "1.6.2.dev20240117" %}
 {% set sha256 = "d9033f801c2d7f1cc9cf32e9d02ee8eaca88fe06b64b8073a3175f1f8d8f7c8d" %}
 # This is the SHA256 of
 #   TileDB-SOMA-i.j.k.tar.gz
@@ -14,8 +14,9 @@ package:
 
 # Post-tag real thing:
 source:
-  url: https://github.com/single-cell-data/TileDB-SOMA/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  git_url: https://github.com/single-cell-data/TileDB-SOMA.git
+  git_rev: main
+  git_depth: 1
 
 # Pre-tag canary "will Conda be green if we release":
 #source:
