@@ -1,7 +1,7 @@
 About tiledbsoma-feedstock
 ==========================
 
-Feedstock license: [BSD-3-Clause](https://github.com/TileDB-Inc/tiledbsoma-feedstock/blob/ss/test-linux-arm64/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/TileDB-Inc/tiledbsoma-feedstock/blob/main/LICENSE.txt)
 
 
 About tiledbsoma
@@ -75,8 +75,8 @@ Current build status
     <td>
       <details>
         <summary>
-          <a href="https://dev.azure.com/TileDB-Inc/CI/_build/latest?definitionId=43&branchName=ss/test-linux-arm64">
-            <img src="https://dev.azure.com/TileDB-Inc/CI/_apis/build/status/tiledbsoma-feedstock?branchName=ss/test-linux-arm64">
+          <a href="https://dev.azure.com/TileDB-Inc/CI/_build/latest?definitionId=43&branchName=main">
+            <img src="https://dev.azure.com/TileDB-Inc/CI/_apis/build/status/tiledbsoma-feedstock?branchName=main">
           </a>
         </summary>
         <table>
@@ -84,8 +84,8 @@ Current build status
           <tbody><tr>
               <td>linux_aarch64</td>
               <td>
-                <a href="https://dev.azure.com/TileDB-Inc/CI/_build/latest?definitionId=43&branchName=ss/test-linux-arm64">
-                  <img src="https://dev.azure.com/TileDB-Inc/CI/_apis/build/status/tiledbsoma-feedstock?branchName=ss/test-linux-arm64&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
+                <a href="https://dev.azure.com/TileDB-Inc/CI/_build/latest?definitionId=43&branchName=main">
+                  <img src="https://dev.azure.com/TileDB-Inc/CI/_apis/build/status/tiledbsoma-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
                 </a>
               </td>
             </tr>
