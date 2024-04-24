@@ -30,7 +30,8 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or linux32 or py2k]
+  #skip: true  # [win or linux32 or py2k]
+  skip: true  # [not aarch64]
 # Important: set this back to 0 on a new release
 
 outputs:
