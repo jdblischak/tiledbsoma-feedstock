@@ -9,7 +9,7 @@ channel_sources:
 channel_targets:
   # FOR THIS PR
   # - tiledb main
-  - tiledb experimental
+  - jdblischak experimental
 channel_priority:
   - strict
 # What follows is the "non-default stuff" block.
@@ -24,7 +24,7 @@ channel_priority:
 # into our existing TileDB Cloud conda environments, so we build a special
 # variant of fmt 9 and spdlog 1.11. And because this can no longer solve with
 # conda-forge depedencies, we install the "for-cloud" statically linked
-# tiledb binary from tiledb/label/for-cloud -- see also 
+# tiledb binary from tiledb/label/for-cloud -- see also
 # https://github.com/TileDB-Inc/tiledb-feedstock-for-cloud
 fmt:                 # [linux and x86]
   - 9                # [linux and x86]

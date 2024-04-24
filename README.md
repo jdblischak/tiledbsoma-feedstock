@@ -101,21 +101,21 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-libtiledbsoma-green.svg)](https://anaconda.org/tiledb/libtiledbsoma) | [![Conda Downloads](https://img.shields.io/conda/dn/tiledb/libtiledbsoma.svg)](https://anaconda.org/tiledb/libtiledbsoma) | [![Conda Version](https://img.shields.io/conda/vn/tiledb/libtiledbsoma.svg)](https://anaconda.org/tiledb/libtiledbsoma) | [![Conda Platforms](https://img.shields.io/conda/pn/tiledb/libtiledbsoma.svg)](https://anaconda.org/tiledb/libtiledbsoma) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-r--tiledbsoma-green.svg)](https://anaconda.org/tiledb/r-tiledbsoma) | [![Conda Downloads](https://img.shields.io/conda/dn/tiledb/r-tiledbsoma.svg)](https://anaconda.org/tiledb/r-tiledbsoma) | [![Conda Version](https://img.shields.io/conda/vn/tiledb/r-tiledbsoma.svg)](https://anaconda.org/tiledb/r-tiledbsoma) | [![Conda Platforms](https://img.shields.io/conda/pn/tiledb/r-tiledbsoma.svg)](https://anaconda.org/tiledb/r-tiledbsoma) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tiledbsoma--py-green.svg)](https://anaconda.org/tiledb/tiledbsoma-py) | [![Conda Downloads](https://img.shields.io/conda/dn/tiledb/tiledbsoma-py.svg)](https://anaconda.org/tiledb/tiledbsoma-py) | [![Conda Version](https://img.shields.io/conda/vn/tiledb/tiledbsoma-py.svg)](https://anaconda.org/tiledb/tiledbsoma-py) | [![Conda Platforms](https://img.shields.io/conda/pn/tiledb/tiledbsoma-py.svg)](https://anaconda.org/tiledb/tiledbsoma-py) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libtiledbsoma-green.svg)](https://anaconda.org/jdblischak/libtiledbsoma) | [![Conda Downloads](https://img.shields.io/conda/dn/jdblischak/libtiledbsoma.svg)](https://anaconda.org/jdblischak/libtiledbsoma) | [![Conda Version](https://img.shields.io/conda/vn/jdblischak/libtiledbsoma.svg)](https://anaconda.org/jdblischak/libtiledbsoma) | [![Conda Platforms](https://img.shields.io/conda/pn/jdblischak/libtiledbsoma.svg)](https://anaconda.org/jdblischak/libtiledbsoma) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--tiledbsoma-green.svg)](https://anaconda.org/jdblischak/r-tiledbsoma) | [![Conda Downloads](https://img.shields.io/conda/dn/jdblischak/r-tiledbsoma.svg)](https://anaconda.org/jdblischak/r-tiledbsoma) | [![Conda Version](https://img.shields.io/conda/vn/jdblischak/r-tiledbsoma.svg)](https://anaconda.org/jdblischak/r-tiledbsoma) | [![Conda Platforms](https://img.shields.io/conda/pn/jdblischak/r-tiledbsoma.svg)](https://anaconda.org/jdblischak/r-tiledbsoma) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-tiledbsoma--py-green.svg)](https://anaconda.org/jdblischak/tiledbsoma-py) | [![Conda Downloads](https://img.shields.io/conda/dn/jdblischak/tiledbsoma-py.svg)](https://anaconda.org/jdblischak/tiledbsoma-py) | [![Conda Version](https://img.shields.io/conda/vn/jdblischak/tiledbsoma-py.svg)](https://anaconda.org/jdblischak/tiledbsoma-py) | [![Conda Platforms](https://img.shields.io/conda/pn/jdblischak/tiledbsoma-py.svg)](https://anaconda.org/jdblischak/tiledbsoma-py) |
 
 Installing tiledbsoma
 =====================
 
-Installing `tiledbsoma` from the `tiledb/label/experimental` channel can be achieved by adding `tiledb/label/experimental` to your channels with:
+Installing `tiledbsoma` from the `jdblischak/label/experimental` channel can be achieved by adding `jdblischak/label/experimental` to your channels with:
 
 ```
-conda config --add channels tiledb/label/experimental
+conda config --add channels jdblischak/label/experimental
 conda config --set channel_priority strict
 ```
 
-Once the `tiledb/label/experimental` channel has been enabled, `libtiledbsoma, r-tiledbsoma, tiledbsoma-py` can be installed with `conda`:
+Once the `jdblischak/label/experimental` channel has been enabled, `libtiledbsoma, r-tiledbsoma, tiledbsoma-py` can be installed with `conda`:
 
 ```
 conda install libtiledbsoma r-tiledbsoma tiledbsoma-py
@@ -130,26 +130,26 @@ mamba install libtiledbsoma r-tiledbsoma tiledbsoma-py
 It is possible to list all of the versions of `libtiledbsoma` available on your platform with `conda`:
 
 ```
-conda search libtiledbsoma --channel tiledb/label/experimental
+conda search libtiledbsoma --channel jdblischak/label/experimental
 ```
 
 or with `mamba`:
 
 ```
-mamba search libtiledbsoma --channel tiledb/label/experimental
+mamba search libtiledbsoma --channel jdblischak/label/experimental
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search libtiledbsoma --channel tiledb/label/experimental
+mamba repoquery search libtiledbsoma --channel jdblischak/label/experimental
 
 # List packages depending on `libtiledbsoma`:
-mamba repoquery whoneeds libtiledbsoma --channel tiledb/label/experimental
+mamba repoquery whoneeds libtiledbsoma --channel jdblischak/label/experimental
 
 # List dependencies of `libtiledbsoma`:
-mamba repoquery depends libtiledbsoma --channel tiledb/label/experimental
+mamba repoquery depends libtiledbsoma --channel jdblischak/label/experimental
 ```
 
 
@@ -163,8 +163,8 @@ package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
-`tiledb` channel, whereupon the built conda packages will be available for
-everybody to install and use from the `tiledb` channel.
+`jdblischak` channel, whereupon the built conda packages will be available for
+everybody to install and use from the `jdblischak` channel.
 Note that all branches in the TileDB-Inc/tiledbsoma-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
