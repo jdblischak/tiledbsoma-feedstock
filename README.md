@@ -34,21 +34,6 @@ Documentation: https://docs.tiledb.com/
 
 SOMA - for "Stack Of Matrices, Annotated" - is a flexible, extensible, and open-source API enabling access to data in a variety of formats. The driving use case of SOMA is for single-cell data in the form of annotated matrices where observations are frequently cells and features are genes, proteins, or genomic regions.
 
-About r-tiledbsoma
-------------------
-
-Home: http://tiledb.com
-
-Package license: MIT
-
-Summary: TileDB-SOMA R API
-
-Development: https://github.com/single-cell-data/TileDB-SOMA/tree/main/apis/r
-
-Documentation: https://docs.tiledb.com/
-
-R API for efficient storage and retrieval of single-cell data using TileDB
-
 About tiledbsoma-py
 -------------------
 
@@ -102,7 +87,6 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-libtiledbsoma-green.svg)](https://anaconda.org/jdblischak/libtiledbsoma) | [![Conda Downloads](https://img.shields.io/conda/dn/jdblischak/libtiledbsoma.svg)](https://anaconda.org/jdblischak/libtiledbsoma) | [![Conda Version](https://img.shields.io/conda/vn/jdblischak/libtiledbsoma.svg)](https://anaconda.org/jdblischak/libtiledbsoma) | [![Conda Platforms](https://img.shields.io/conda/pn/jdblischak/libtiledbsoma.svg)](https://anaconda.org/jdblischak/libtiledbsoma) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-r--tiledbsoma-green.svg)](https://anaconda.org/jdblischak/r-tiledbsoma) | [![Conda Downloads](https://img.shields.io/conda/dn/jdblischak/r-tiledbsoma.svg)](https://anaconda.org/jdblischak/r-tiledbsoma) | [![Conda Version](https://img.shields.io/conda/vn/jdblischak/r-tiledbsoma.svg)](https://anaconda.org/jdblischak/r-tiledbsoma) | [![Conda Platforms](https://img.shields.io/conda/pn/jdblischak/r-tiledbsoma.svg)](https://anaconda.org/jdblischak/r-tiledbsoma) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-tiledbsoma--py-green.svg)](https://anaconda.org/jdblischak/tiledbsoma-py) | [![Conda Downloads](https://img.shields.io/conda/dn/jdblischak/tiledbsoma-py.svg)](https://anaconda.org/jdblischak/tiledbsoma-py) | [![Conda Version](https://img.shields.io/conda/vn/jdblischak/tiledbsoma-py.svg)](https://anaconda.org/jdblischak/tiledbsoma-py) | [![Conda Platforms](https://img.shields.io/conda/pn/jdblischak/tiledbsoma-py.svg)](https://anaconda.org/jdblischak/tiledbsoma-py) |
 
 Installing tiledbsoma
@@ -115,16 +99,16 @@ conda config --add channels jdblischak/label/experimental
 conda config --set channel_priority strict
 ```
 
-Once the `jdblischak/label/experimental` channel has been enabled, `libtiledbsoma, r-tiledbsoma, tiledbsoma-py` can be installed with `conda`:
+Once the `jdblischak/label/experimental` channel has been enabled, `libtiledbsoma, tiledbsoma-py` can be installed with `conda`:
 
 ```
-conda install libtiledbsoma r-tiledbsoma tiledbsoma-py
+conda install libtiledbsoma tiledbsoma-py
 ```
 
 or with `mamba`:
 
 ```
-mamba install libtiledbsoma r-tiledbsoma tiledbsoma-py
+mamba install libtiledbsoma tiledbsoma-py
 ```
 
 It is possible to list all of the versions of `libtiledbsoma` available on your platform with `conda`:

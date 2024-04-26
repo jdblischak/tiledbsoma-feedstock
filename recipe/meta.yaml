@@ -138,6 +138,7 @@ outputs:
     version: {{ version }}
     script: build-r-tiledbsoma.sh
     build:
+      skip: true # due to spdlog solver error
       rpaths:
         - lib/R/lib/
         - lib/
