@@ -18,10 +18,10 @@ channel_priority:
 # tiledb/label/for-cloud
 fmt:                 # [linux]
   - 9                # [linux]
-  - 10               # [linux]
+  - 11               # [linux]
 spdlog:              # [linux]
   - 1.11             # [linux]
-  - 1.13             # [linux]
+  - 1.14             # [linux]
 pyarrow:             # [linux]
   - 11               # [linux]
   - 16               # [linux]
@@ -34,5 +34,7 @@ zip_keys:            # [linux]
 # (fmt9+spdlog1.11), we have to migrate the osx-* manually here. Once the
 # conda-forge-pinning-feedstock is updated to spdlog 1.13, we can remove the
 # manual pin below
+fmt:                 # [not linux]
+  - 11               # [not linux]
 spdlog:              # [not linux]
-  - 1.13             # [not linux]
+  - 1.14             # [not linux]
