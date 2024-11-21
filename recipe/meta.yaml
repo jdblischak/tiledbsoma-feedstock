@@ -135,7 +135,6 @@ outputs:
     version: {{ version }}
     script: build-r-tiledbsoma.sh
     build:
-      skip: true
       rpaths:
         - lib/R/lib/
         - lib/
