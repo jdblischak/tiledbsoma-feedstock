@@ -54,4 +54,4 @@ if [ ${res} != "TRUE" ]; then
   exit 1
 fi
 
-${R} CMD INSTALL ${R_ARGS_EXTRA} --build . ${R_ARGS}
+${R} CMD INSTALL ${R_ARGS_EXTRA} --build --no-help . ${R_ARGS}
