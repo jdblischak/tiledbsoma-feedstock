@@ -72,6 +72,8 @@ outputs:
   - name: tiledbsoma-py
     version: {{ version }}
     script: build-tiledbsoma-py.sh
+    build:
+      skip: true
     requirements:
       build:
         - {{ compiler('cxx') }}

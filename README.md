@@ -49,21 +49,6 @@ Documentation: https://docs.tiledb.com/
 
 R API for efficient storage and retrieval of single-cell data using TileDB
 
-About tiledbsoma-py
--------------------
-
-Home: http://tiledb.com
-
-Package license: MIT
-
-Summary: TileDB-SOMA Python API
-
-Development: https://github.com/single-cell-data/TileDB-SOMA/tree/main/apis/python
-
-Documentation: https://docs.tiledb.com/
-
-Python API for efficient storage and retrieval of single-cell data using TileDB
-
 Current build status
 ====================
 
@@ -103,7 +88,6 @@ Current release info
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-libtiledbsoma-green.svg)](https://anaconda.org/tiledb/libtiledbsoma) | [![Conda Downloads](https://img.shields.io/conda/dn/tiledb/libtiledbsoma.svg)](https://anaconda.org/tiledb/libtiledbsoma) | [![Conda Version](https://img.shields.io/conda/vn/tiledb/libtiledbsoma.svg)](https://anaconda.org/tiledb/libtiledbsoma) | [![Conda Platforms](https://img.shields.io/conda/pn/tiledb/libtiledbsoma.svg)](https://anaconda.org/tiledb/libtiledbsoma) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-r--tiledbsoma-green.svg)](https://anaconda.org/tiledb/r-tiledbsoma) | [![Conda Downloads](https://img.shields.io/conda/dn/tiledb/r-tiledbsoma.svg)](https://anaconda.org/tiledb/r-tiledbsoma) | [![Conda Version](https://img.shields.io/conda/vn/tiledb/r-tiledbsoma.svg)](https://anaconda.org/tiledb/r-tiledbsoma) | [![Conda Platforms](https://img.shields.io/conda/pn/tiledb/r-tiledbsoma.svg)](https://anaconda.org/tiledb/r-tiledbsoma) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tiledbsoma--py-green.svg)](https://anaconda.org/tiledb/tiledbsoma-py) | [![Conda Downloads](https://img.shields.io/conda/dn/tiledb/tiledbsoma-py.svg)](https://anaconda.org/tiledb/tiledbsoma-py) | [![Conda Version](https://img.shields.io/conda/vn/tiledb/tiledbsoma-py.svg)](https://anaconda.org/tiledb/tiledbsoma-py) | [![Conda Platforms](https://img.shields.io/conda/pn/tiledb/tiledbsoma-py.svg)](https://anaconda.org/tiledb/tiledbsoma-py) |
 
 Installing tiledbsoma
 =====================
@@ -115,16 +99,16 @@ conda config --add channels tiledb
 conda config --set channel_priority strict
 ```
 
-Once the `tiledb` channel has been enabled, `libtiledbsoma, r-tiledbsoma, tiledbsoma-py` can be installed with `conda`:
+Once the `tiledb` channel has been enabled, `libtiledbsoma, r-tiledbsoma` can be installed with `conda`:
 
 ```
-conda install libtiledbsoma r-tiledbsoma tiledbsoma-py
+conda install libtiledbsoma r-tiledbsoma
 ```
 
 or with `mamba`:
 
 ```
-mamba install libtiledbsoma r-tiledbsoma tiledbsoma-py
+mamba install libtiledbsoma r-tiledbsoma
 ```
 
 It is possible to list all of the versions of `libtiledbsoma` available on your platform with `conda`:
