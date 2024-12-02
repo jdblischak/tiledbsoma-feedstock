@@ -8,11 +8,9 @@ export DISABLE_AUTOBREW=1
 
 echo $(R RHOME)/etc/Makeconf
 cat $(R RHOME)/etc/Makeconf
-pwd
-ls
-cat src/Makevars
 mkdir -p ~/.R
-echo "CXX20 = g++" > ~/.R/Makevars
+echo $CXX
+echo "CXX20 = $CXX" > ~/.R/Makevars
 cat ~/.R/Makevars
 
 # https://github.com/conda-forge/r-tiledb-feedstock/commit/29cb6816636e7b5b58545e1407a8f0c29ff9dc39
