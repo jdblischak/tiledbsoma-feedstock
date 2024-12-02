@@ -10,7 +10,7 @@ echo $(R RHOME)/etc/Makeconf
 cat $(R RHOME)/etc/Makeconf
 mkdir -p ~/.R
 echo $CXX
-echo "CXX20 = $CXX" > ~/.R/Makevars
+echo "CXX20 = $CXX -std=gnu++20" > ~/.R/Makevars
 cat ~/.R/Makevars
 
 # https://github.com/conda-forge/r-tiledb-feedstock/commit/29cb6816636e7b5b58545e1407a8f0c29ff9dc39
