@@ -6,15 +6,11 @@ cd apis/r
 
 export DISABLE_AUTOBREW=1
 
-if [[ $target_platform  == linux-64 ]]; then
-  mkdir -p ~/.R
-  cat << EOF > ~/.R/Makevars
-CXX20 = $CXX
-CXX20FLAGS = $CXXFLAGS
-CXX20PICFLAGS = -fPIC
-CXX20STD = -std=c++20
-EOF
-fi
+export CXX20="$CXX"
+export CXX20FLAGS="$CXXFLAGS"
+export CXX20PICFLAGS=-fPIC
+export CXX20STD=-std=c++20
+env | grep CXX20
 
 # https://github.com/conda-forge/r-tiledb-feedstock/commit/29cb6816636e7b5b58545e1407a8f0c29ff9dc39
 if [[ $target_platform  == osx-64 ]]; then
