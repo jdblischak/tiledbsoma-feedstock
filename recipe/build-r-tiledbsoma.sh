@@ -10,7 +10,7 @@ if [[ $target_platform  == linux-64 ]]; then
   mkdir -p ~/.R
   cat << EOF > ~/.R/Makevars
 CXX20 = $CXX
-CXX20FLAGS = $CXXFLAGS
+CXX20FLAGS = $CXXFLAGS -Wno-deprecated-declarations -Wno-deprecated
 CXX20PICFLAGS = -fPIC
 CXX20STD = -std=c++20
 EOF
@@ -27,8 +27,6 @@ if [[ $target_platform  == osx-64 ]]; then
   echo CXX=$RECIPE_DIR/cxx_wrap.sh >> ~/.R/Makevars
   echo CXX20=$RECIPE_DIR/cxx_wrap.sh >> ~/.R/Makevars
 fi
-
-export CXX20FLAGS="-Wno-deprecated-declarations -Wno-deprecated"
 
 # https://conda-forge.org/docs/maintainer/knowledge_base/#newer-c-features-with-old-sdk
 if [[ $target_platform == osx-*  ]]; then
