@@ -6,12 +6,15 @@ cd apis/r
 
 export DISABLE_AUTOBREW=1
 
-echo $(R RHOME)/etc/Makeconf
-cat $(R RHOME)/etc/Makeconf
-mkdir -p ~/.R
-echo $CXX
-echo "CXX20 = $CXX -std=gnu++20" > ~/.R/Makevars
-cat ~/.R/Makevars
+if [[ $target_platform  == linux-64 ]]; then
+  mkdir -p ~/.R
+  cat << EOF > ~/.R/Makevars
+CXX20 = $CXX
+CXX20FLAGS = $CXXFLAGS
+CXX20PICFLAGS = -fPIC
+CXX20STD = -std=c++20
+EOF
+fi
 
 # https://github.com/conda-forge/r-tiledb-feedstock/commit/29cb6816636e7b5b58545e1407a8f0c29ff9dc39
 if [[ $target_platform  == osx-64 ]]; then
