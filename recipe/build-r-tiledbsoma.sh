@@ -9,15 +9,6 @@ export CXXFLAGS=${CXXFLAGS//"-fvisibility-inlines-hidden"/}
 
 export DISABLE_AUTOBREW=1
 
-# https://github.com/conda-forge/r-tiledb-feedstock/commit/29cb6816636e7b5b58545e1407a8f0c29ff9dc39
-if [[ $target_platform == osx-* ]]; then
-  export NN_CXX_ORIG=$CXX
-  export NN_CC_ORIG=$CC
-  export CXX=$RECIPE_DIR/cxx_wrap.sh
-  export CC=$RECIPE_DIR/cc_wrap.sh
-  export CXX20=$RECIPE_DIR/cxx_wrap.sh
-fi
-
 export CXX="$CXX -std=c++20 -fPIC"
 export CXX20="$CXX"
 
