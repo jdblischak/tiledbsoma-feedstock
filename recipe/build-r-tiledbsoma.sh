@@ -47,4 +47,9 @@ if [ ${res} != "TRUE" ]; then
   exit 1
 fi
 
+echo "=== C++ related env vars"
+env | grep -e CC -e CXX -e FLAGS
+echo "=== Contents of ~/.R/Makevars"
+cat ~/.R/Makevars
+
 ${R} CMD INSTALL ${R_ARGS_EXTRA} --build . ${R_ARGS}
