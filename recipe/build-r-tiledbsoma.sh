@@ -6,24 +6,25 @@ cd apis/r
 
 export DISABLE_AUTOBREW=1
 
-# https://github.com/conda-forge/r-tiledb-feedstock/commit/29cb6816636e7b5b58545e1407a8f0c29ff9dc39
-if [[ $target_platform  == osx-64 ]]; then
-  export NN_CXX_ORIG=$CXX
-  export NN_CC_ORIG=$CC
-  export CXX=$RECIPE_DIR/cxx_wrap.sh
-  export CC=$RECIPE_DIR/cc_wrap.sh
-  mkdir -p ~/.R
-  echo CC=$RECIPE_DIR/cc_wrap.sh > ~/.R/Makevars
-  echo CXX=$RECIPE_DIR/cxx_wrap.sh >> ~/.R/Makevars
-  echo CXX17=$RECIPE_DIR/cxx_wrap.sh >> ~/.R/Makevars
-fi
-
-export CXX17FLAGS="-Wno-deprecated-declarations -Wno-deprecated"
+# Clear default compiler flags
+export CXXFLAGS=${CXXFLAGS//"-fvisibility-inlines-hidden"/}
 
 # https://conda-forge.org/docs/maintainer/knowledge_base/#newer-c-features-with-old-sdk
 if [[ $target_platform == osx-*  ]]; then
-  CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
+  CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY -mmacosx-version-min=13.3"
 fi
+
+export CXX20FLAGS="-Wno-deprecated-declarations -Wno-deprecated"
+
+mkdir -p ~/.R
+echo CC="$CC" > ~/.R/Makevars
+echo CXX="$CXX" >> ~/.R/Makevars
+echo CXXFLAGS="$CXXFLAGS" >> ~/.R/Makevars
+echo CXX20="$CXX20" >> ~/.R/Makevars
+echo CXX20FLAGS="$CXX20FLAGS" >> ~/.R/Makevars
+
+echo "=== Contents of ~/.R/Makevars"
+cat ~/.R/Makevars
 
 # Unlike most R recipes which are built for one R version per job, this recipe
 # with multiple outputs builds for each of the R versions in the same job. Thus
