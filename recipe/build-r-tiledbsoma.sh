@@ -20,7 +20,7 @@ mkdir -p ~/.R
 echo CC="$CC" > ~/.R/Makevars
 echo CXX="$CXX" >> ~/.R/Makevars
 echo CXXFLAGS="$CXXFLAGS" >> ~/.R/Makevars
-echo CXX20="$CXX20" >> ~/.R/Makevars
+echo CXX20="$CXX" >> ~/.R/Makevars
 echo CXX20FLAGS="$CXX20FLAGS" >> ~/.R/Makevars
 
 echo "=== Contents of ~/.R/Makevars"
