@@ -11,9 +11,11 @@ export CXXFLAGS=${CXXFLAGS//"-fvisibility-inlines-hidden"/}
 
 # https://conda-forge.org/docs/maintainer/knowledge_base/#newer-c-features-with-old-sdk
 if [[ $target_platform == osx-*  ]]; then
-  CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY -mmacosx-version-min=13.3"
+  export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY -mmacosx-version-min=13.3"
 fi
 
+export CXX="$CXX -std=c++20 -fPIC"
+export CXX20="$CXX"
 export CXX20FLAGS="-Wno-deprecated-declarations -Wno-deprecated"
 
 mkdir -p ~/.R
