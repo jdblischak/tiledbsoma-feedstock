@@ -11,7 +11,7 @@ export CXXFLAGS=${CXXFLAGS//"-fvisibility-inlines-hidden"/}
 
 # https://conda-forge.org/docs/maintainer/knowledge_base/#newer-c-features-with-old-sdk
 if [[ $target_platform == osx-*  ]]; then
-  CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY -mmacosx-version-min=13.3"
+  export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY -mmacosx-version-min=13.3"
 fi
 
 export CXX20FLAGS="-Wno-deprecated-declarations -Wno-deprecated"
@@ -19,9 +19,7 @@ export CXX20FLAGS="-Wno-deprecated-declarations -Wno-deprecated"
 mkdir -p ~/.R
 echo CC="$CC" > ~/.R/Makevars
 echo CXX="$CXX" >> ~/.R/Makevars
-echo CXXFLAGS="$CXXFLAGS" >> ~/.R/Makevars
 echo CXX20="$CXX" >> ~/.R/Makevars
-echo CXX20FLAGS="$CXX20FLAGS" >> ~/.R/Makevars
 
 echo "=== Contents of ~/.R/Makevars"
 cat ~/.R/Makevars
