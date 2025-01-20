@@ -15,7 +15,6 @@ if [[ $target_platform == osx-* ]]; then
   export NN_CC_ORIG=$CC
   export CXX=$RECIPE_DIR/cxx_wrap.sh
   export CC=$RECIPE_DIR/cc_wrap.sh
-  export CXX20=$RECIPE_DIR/cxx_wrap.sh
 fi
 
 export CXX="$CXX -std=c++20 -fPIC"
