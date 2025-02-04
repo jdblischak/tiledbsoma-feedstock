@@ -106,8 +106,13 @@ outputs:
       imports:
         - tiledbsoma
       requires:
+        - typeguard
         - pip
+        - pyarrow ==11
+        - pytest
         - tiledb-py >=0.33.0,<0.34.0
+      source_files:
+        - apis/python/tests/
       commands:
         - python -c 'import tiledbsoma; print(tiledbsoma.pytiledbsoma.version())'
         # See also:
@@ -117,6 +122,7 @@ outputs:
         # https://github.com/apache/arrow/issues/42154
         - python -c 'import tiledbsoma; assert not tiledbsoma.DataFrame.exists("s3://abc/def")'
         - pip check
+        - pytest apis/python/tests/test_dataframe.py
     about:
       home: http://tiledb.com
       license: MIT
