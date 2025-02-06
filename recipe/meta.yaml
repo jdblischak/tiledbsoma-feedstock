@@ -110,6 +110,7 @@ outputs:
         - pip
         - pyarrow ==11
         - pytest
+        - sparse
         - tiledb-py >=0.33.0,<0.34.0
       source_files:
         - apis/python/tests/
