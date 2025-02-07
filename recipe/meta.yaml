@@ -115,6 +115,7 @@ outputs:
         - tiledb-py >=0.33.0,<0.34.0
         - typeguard
       source_files:
+        - apis/python/notebooks/data/
         - apis/python/testdata/
         - apis/python/tests/
         - Makefile
