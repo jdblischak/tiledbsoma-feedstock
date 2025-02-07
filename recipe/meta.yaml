@@ -116,6 +116,8 @@ outputs:
         - typeguard
       source_files:
         - apis/python/tests/
+        - Makefile
+        - test/
       commands:
         - python -c 'import tiledbsoma; print(tiledbsoma.pytiledbsoma.version())'
         # See also:
