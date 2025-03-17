@@ -213,9 +213,7 @@ outputs:
         - "otool -L $PREFIX/lib/R/library/tiledbsoma/libs/tiledbsoma.dylib | grep -e libR -e libtiledb"  # [osx and r_base == "4.3"]
         - "otool -L $PREFIX/lib/R/library/tiledbsoma/libs/tiledbsoma.so    | grep -e libR -e libtiledb"  # [osx and r_base != "4.3"]
         # Run testthat tests
-        - pwd
-        - ls -R
-        - $R -e "testthat::test_file('tests/testthat.R', stop_on_failure = TRUE)"
+        - $R -e "testthat::test_file('apis/r/tests/testthat.R', stop_on_failure = TRUE)"
     about:
       home: http://tiledb.com
       license: MIT
