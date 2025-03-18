@@ -201,6 +201,7 @@ outputs:
         - r-iterators
         - r-itertools
         - r-jsonlite
+        - r-seuratobject >= 4.1.0
         - r-testthat >=3.0.0
         - r-withr
       source_files:
