@@ -152,7 +152,7 @@ outputs:
         # required for cross-compilation
         - cross-r-base {{ r_base }}  # [build_platform != target_platform]
         - r-rcppspdlog >=0.0.20      # [build_platform != target_platform]
-        - r-matrix                   # [build_platform != target_platform]
+        - r-matrix >=1.7.3           # [build_platform != target_platform]
         - r-bit64 >=4.6.0.1          # [build_platform != target_platform]
         - r-rcppint64                # [build_platform != target_platform]
         - r-tiledb >=0.31.0,<0.32    # [build_platform != target_platform]
@@ -169,7 +169,7 @@ outputs:
         - {{ pin_subpackage('libtiledbsoma', exact=True) }}
         - r-base
         - r-r6
-        - r-matrix
+        - r-matrix >=1.7.3
         - r-bit64 >=4.6.0.1
         - r-rcppint64
         - r-tiledb >=0.31.0,<0.32
@@ -187,7 +187,7 @@ outputs:
         - {{ pin_subpackage('libtiledbsoma', exact=True) }}
         - r-base
         - r-r6
-        - r-matrix
+        - r-matrix >=1.7.3
         - r-bit64 >=4.6.0.1
         - r-tiledb >=0.31.0,<0.32
         - r-arrow
